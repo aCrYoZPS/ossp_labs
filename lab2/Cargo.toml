@@ -1,0 +1,17 @@
+[package]
+name = "lab2"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bindings = { path = "bindings" }
+[dependencies.windows]
+version = ">=0.59, <=0.62"
+features = [
+    "Data_Xml_Dom",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Shell",
+]
