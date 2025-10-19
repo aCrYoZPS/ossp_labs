@@ -1,0 +1,29 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1/" /p:OutDir="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\bin\Release\net10.0/" /p:OutputPath="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\bin\Release\net10.0/" /p:PublishDir="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\publish/" in C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1
+// command took 0.69 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1/" /p:OutDir="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\bin\Release\net10.0/" /p:OutputPath="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\bin\Release\net10.0/" /p:PublishDir="C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\publish/" --output "C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\bin\Release\net10.0/" in C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1
+// command took 3.5 sec and exited with 0
+// ***** Done, took 00:00:04 (4.25 sec)   *****
+// Found 1 benchmarks:
+//   Benchmark.ChunkFileRead: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: Benchmark.ChunkFileRead: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet lab2_dotnet-DefaultJob-1.dll --anonymousPipes 1388 1304 --benchmarkName Benchmark.ChunkFileRead --job Default --benchmarkId 0 in C:\Users\aCrYoZ\ossp\lab2_dotnet\bin\Release\net10.0\lab2_dotnet-DefaultJob-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.4
+// Runtime=.NET 10.0.0 (10.0.0-rc.2.25502.107, 10.0.25.50307), X64 RyuJIT x86-64-v4
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX512 BITALG+VBMI2+VNNI+VPOPCNTDQ,AVX512 IFMA+VBMI,AVX512 F+BW+CD+DQ+VL,AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 76700.00 ns, 76.7000 us/op
+Successfully reverted power plan (GUID: 624cb7b6-c2e7-4378-bb2d-d15bf4107044 FriendlyName: Ultimate Performance)

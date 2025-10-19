@@ -4,7 +4,7 @@ import sys
 
 def generate_random_binary_file(filename, size_in_mb):
     chunk_size = 1024 * 1024
-    total_bytes = size_in_mb * chunk_size
+    total_bytes = int(size_in_mb * chunk_size)
 
     with open(filename, 'wb') as f:
         bytes_written = 0
@@ -16,7 +16,7 @@ def generate_random_binary_file(filename, size_in_mb):
 
 
 def main():
-    generate_random_binary_file("bigdata.bin", int(sys.argv[1]))
+    generate_random_binary_file("bigdata.bin", float(sys.argv[1]))
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
-*.exe
-**/.vs/
 **/target/
+**/Cargo.lock
 bigdata.bin
-
+**/bin/
+**/obj/
+**/.vs/

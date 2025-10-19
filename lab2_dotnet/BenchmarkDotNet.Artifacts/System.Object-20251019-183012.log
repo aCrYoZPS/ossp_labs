@@ -1,0 +1,4 @@
+// Validating benchmarks:
+// Benchmark Benchmark.ChunkFileRead: DefaultJob
+//    * Benchmarked method `ChunkFileRead` is within a non-visible class, all declaring types must be public.
+
