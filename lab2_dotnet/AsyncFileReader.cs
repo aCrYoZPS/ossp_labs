@@ -21,8 +21,6 @@ class AsyncFileReader
         {
             Task finishedTask = await Task.WhenAny(tasks);
             tasks.Remove(finishedTask);
-
-            await finishedTask;
         }
     }
 

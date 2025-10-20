@@ -1,41 +1,17 @@
 ﻿using lab2_dotnet;
 using System.Diagnostics;
-using System.Globalization;
 
-
-double fileSizeMb;
-if (!double.TryParse(args[0], CultureInfo.InvariantCulture, out fileSizeMb))
-{
-    fileSizeMb = 5;
-}
-CreateBinaryFile(fileSizeMb);
 
 var fileSize = new FileInfo(Globals.BINARY_FILE_PATH).Length;
 Console.WriteLine($"File size: {fileSize} bytes");
 var bm = new Benchmark();
 bm.RunAll();
 
-static void CreateBinaryFile(double sizeMb)
-{
-    var process = new Process
-    {
-        StartInfo = new ProcessStartInfo
-        {
-            FileName = "python",
-            Arguments = @$"C:\Users\aCrYoZ\ossp\big_data_generator.py {sizeMb.ToString(CultureInfo.InvariantCulture)}",
-            UseShellExecute = false,
-            CreateNoWindow = true,
-        }
-    };
-
-    process.Start();
-    process.WaitForExit();
-}
-
 public class Benchmark
 {
     private readonly FileReader fileReader = new FileReader() { Action = QuickSort };
     private readonly AsyncFileReader asyncFileReader = new AsyncFileReader() { Action = QuickSort };
+    private readonly AsyncMultithreadedFileReader asyncMultithreadedFileReader = new AsyncMultithreadedFileReader { Action = QuickSort };
 
     public void ChunkFileRead()
     {
@@ -61,11 +37,29 @@ public class Benchmark
         Console.WriteLine($"AsyncChunkFileRead elapsed time: {sw.Elapsed:mm\\:ss\\.fff}");
     }
 
+    public void AsyncMultithreadedChunkFileRead()
+    {
+        var sw = Stopwatch.StartNew();
+        asyncMultithreadedFileReader.ReadFileChunksMultithreadedAsync(Globals.BINARY_FILE_PATH).Wait();
+        sw.Stop();
+        Console.WriteLine($"AsyncMultithreadedChunkFileRead elapsed time: {sw.Elapsed:mm\\:ss\\.fff}");
+    }
+
+    public void AsyncMultithreadedThreadPoolChunkFileRead()
+    {
+        var sw = Stopwatch.StartNew();
+        asyncMultithreadedFileReader.ReadFileChunksMultithreadedThreadPoolAsync(Globals.BINARY_FILE_PATH).Wait();
+        sw.Stop();
+        Console.WriteLine($"AsyncMultithreadedChunkFileRead elapsed time: {sw.Elapsed:mm\\:ss\\.fff}");
+    }
+
     public void RunAll()
     {
         ChunkFileRead();
         // FullFileRead();
         AsyncChunkFileRead();
+        AsyncMultithreadedChunkFileRead();
+        AsyncMultithreadedThreadPoolChunkFileRead();
     }
 
     public static void LinearAction(byte[] bytes)
