@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\TestKey]
+@="111"
+"StrVal"="AAAAAAAAAAAAAAA"
+"BinVal"=hex:48,65,6c,6c,6f,21
+"DwordVal"=dword:00000064
+"QwordVal"=hex(b):ad,fb,ca,de,ef,be,ad,de
+"MultistringVal"=hex(7):53,00,74,00,72,00,69,00,6e,00,\
+  67,00,31,00,00,00,53,00,74,00,\
+  72,00,69,00,6e,00,67,00,32,00,\
+  00,00,00,00
+"ExpandablestringVal"=hex(2):25,00,50,00,41,00,54,00,48,00,25,00,00,00
+"EmptyStr"=""
+"EmptyBin"=hex:
+
+[HKEY_CURRENT_USER\TestKey\TestSubKey]
+"SubkeyString"="String"
+
+[HKEY_CURRENT_USER\TestKey\TestSubKey\TestSubSubKey]
