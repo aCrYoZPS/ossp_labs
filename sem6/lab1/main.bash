@@ -83,7 +83,7 @@ while $game_on; do
     
     color=$(get_player_color "$player")
     printf "Player ${color}$player${RESET}'s turn.\n"
-    printf "Enter cell (1-9): "
+    printf "Enter cell (1-9) or command: "
     read choice
     
     if [ $choice == "S" ]; then
