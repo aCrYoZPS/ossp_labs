@@ -1,0 +1,5 @@
+Apples, 10, 50
+Pears, 5, 80
+Apples, 20, 45
+Bananas, 15, 60
+Pears, 10, 75

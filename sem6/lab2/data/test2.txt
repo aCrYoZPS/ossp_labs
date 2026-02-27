@@ -1,0 +1,2 @@
+Pears, 5, 80
+Coconut, 10, 75
