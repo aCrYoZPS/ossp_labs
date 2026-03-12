@@ -1,0 +1,12 @@
+[Wed Mar 11 13:57:50 2026] Configuration loaded.
+[Wed Mar 11 13:57:50 2026] Daemon started.
+[Wed Mar 11 13:58:24 2026] Received monitored signal: SIGUSR1 (10)
+[Wed Mar 11 14:07:04 2026] Received monitored signal: SIGINT (2)
+[Wed Mar 11 14:10:10 2026] Received monitored signal: SIGHUP (1)
+[Wed Mar 11 14:10:10 2026] Configuration loaded.
+[Wed Mar 11 14:10:24 2026] Received monitored signal: SIGSYS (31)
+[Wed Mar 11 14:11:01 2026] Received monitored signal: SIGTERM (15)
+[Wed Mar 11 14:11:01 2026] Daemon terminating.
+[Wed Mar 11 14:17:33 2026] Configuration loaded.
+[Wed Mar 11 14:17:33 2026] Daemon started.
+[Wed Mar 11 14:17:59 2026] Received monitored signal: SIGSYS (31)

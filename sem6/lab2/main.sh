@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Parse options
 OPTION=""
 if [[ "$1" == -* && "$1" != "-h" && "$1" != "--help" ]]; then
     OPTION="$1"
